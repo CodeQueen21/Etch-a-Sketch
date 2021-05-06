@@ -14,7 +14,9 @@ function row() {
   for(let i = 0; i < 16; i++) {
       let clone = div.cloneNode(true);
       clone.classList.add('cell');
-     
+      clone.addEventListener('mouseenter', () => {
+        clone.style.backgroundColor = rdmColor(clone);
+      })
      container.appendChild(clone);
   }
 }
