@@ -14,6 +14,14 @@ function row() {
   }
 }
 
+function column() {
+  for (let i = 0; i < 32; i++) {
+      row();
+      i++;
+  }
+}
+
+column();
 
 
 
