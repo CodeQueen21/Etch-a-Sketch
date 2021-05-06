@@ -1,1 +1,11 @@
+* {
+    font-family: Lobster, sans-serif;
+    color: white;
+  }
+  
+  body {
+      box-sizing: border-box;
+      margin: 0;background-image: linear-gradient(to right bottom, rgb(8, 255, 160) 45%, white);
+  }
 
+  
