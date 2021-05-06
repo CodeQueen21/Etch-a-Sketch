@@ -88,3 +88,14 @@
     border: 1px solid white;
     border-radius: 5px;
 }
+
+#gridContainer {
+    border: 1px black solid;
+    background-color: white;
+    width: 496px;
+    height: 496px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
