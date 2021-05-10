@@ -5,7 +5,8 @@
   
   body {
       box-sizing: border-box;
-      margin: 0;background-image: linear-gradient(to right bottom, rgb(8, 255, 160) 45%, white);
+      margin: 0;
+      background-image: linear-gradient(to right bottom, rgb(8, 255, 160) 45%, white);
   }
 
   
@@ -39,8 +40,7 @@
 }
 
 #gridSize:hover {
-    border: 1px solid white;
-    border-radius: 5px;
+   cursor: pointer;
 }
 
 #options label {
@@ -71,8 +71,7 @@
 }
 
 #rainbow:hover {
-    border: 1px solid white;
-    border-radius: 5px;
+   cursor: pointer;
 }
 
 #clear {
@@ -85,8 +84,7 @@
 }
 
 #clear:hover {
-    border: 1px solid white;
-    border-radius: 5px;
+    cursor: pointer;
 }
 
 #gridContainer {
