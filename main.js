@@ -91,7 +91,7 @@ function isClicked(element) {
   }
 }
 
-//creates random colors
+//creates the random colors
 function rdmColor(element) {
   const randomColor = Math.floor(Math.random()*16777215).toString(16);
   element.style.backgroundColor = "#" + randomColor; 
@@ -100,13 +100,13 @@ function rdmColor(element) {
 
 //adds functionality for when each btn is clicked
 function btnClicked(element) {
-  if(isClicked(rainbowBtn) === true) {
-    element.style.backgroundColor = rdmColor(element);
-  } else if(isClicked(colorInput) === true) {
-    element.style.backgroundColor = color;
-  } else if(isClicked(eraseBtn) === true) {
-    element.style.backgroundColor = 'white';
-  } 
+    if(isClicked(rainbowBtn) === true) {
+      element.style.backgroundColor = rdmColor(element);
+    } else if(isClicked(colorInputLabel) === true) {
+      element.style.backgroundColor = color;
+    } else if(isClicked(eraseBtn) === true) {
+      element.style.backgroundColor = 'white';
+    } 
 }
 
 //promps user to enter what size grid they would like then saves it
@@ -131,7 +131,7 @@ function gridChange(answer) {
   }
 }
 
-// medium sized grid
+//mediumGrid cellSize
 function mediumGridCellGenerator() {
   for(let i = 0; i < 16; i++) {
     div.style.width = '29px';
@@ -155,6 +155,7 @@ function mediumGridCellGenerator() {
   }
 }
 
+
 function mediumGridTotalCells() {
   for (let i = 0; i < 32; i++) {
       mediumGridCellGenerator();
@@ -163,7 +164,7 @@ function mediumGridTotalCells() {
 }
 mediumGridTotalCells();
 
-//largeGrid cellSize
+ //largeGrid cellSize
 function largeGridCellGenerator() {
   for(let i = 0; i < 8; i++) {
     div.style.width = '60px';
