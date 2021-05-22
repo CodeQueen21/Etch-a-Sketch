@@ -84,6 +84,15 @@ clearBtn.addEventListener('click', () => {
   gridSizeBtn.style.borderRadius = 'none';
 })
 
+//determines which btn was clicked
+function isClicked(element) {
+  if(element.style.border === 'thin solid white') {
+    return true
+  } else {
+    return false;
+  }
+}
+
 function rdmColor(element) {
   const randomColor = Math.floor(Math.random()*16777215).toString(16);
   element.style.backgroundColor = "#" + randomColor; 
