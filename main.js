@@ -190,6 +190,12 @@ function smallGridTotalCells() {
   }
 }
 
+//promps user to choose which grid size they want when the change grid size btn is clicked
+gridSizeBtn.addEventListener('click', () => {
+  gridSizeChoice();
+  gridChange(userAnswer);
+}) 
+
 
 
 
