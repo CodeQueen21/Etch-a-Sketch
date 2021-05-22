@@ -11,6 +11,9 @@ let eraseBtn = document.getElementById('erase');
 let clearBtn = document.getElementById('clear')
 let userAnswer;
 
+
+
+//styling for when change grid size btn is clicked
 gridSizeBtn.addEventListener('click', () => {
   gridSizeBtn.style.border = 'thin solid white';
   gridSizeBtn.style.borderRadius = '5px';
