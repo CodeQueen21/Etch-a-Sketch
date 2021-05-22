@@ -144,14 +144,13 @@ function mediumGridCellGenerator() {
     clearBtn.addEventListener('click', () => {
       clone.style.backgroundColor = null;
     })
-    gridSizeBtn.addEventListener('click', () => {
-        if(userAnswer === 'large' || userAnswer === 'small') {
-          container.removeChild(clone);  
-        }
-      
-    }) 
+     
    container.appendChild(clone);
-  
+   gridSizeBtn.addEventListener('click', () => {
+    if(userAnswer === 'large' || userAnswer === 'small') {
+      container.removeChild(clone);  
+   }
+  })
   }
 }
 
@@ -162,7 +161,7 @@ function mediumGridTotalCells() {
       i++;
   }
 }
-mediumGridTotalCells();
+
 
  //largeGrid cellSize
 function largeGridCellGenerator() {
@@ -177,12 +176,13 @@ function largeGridCellGenerator() {
     clearBtn.addEventListener('click', () => {
       clone.style.backgroundColor = null;
     })
+    
+    container.appendChild(clone);
     gridSizeBtn.addEventListener('click', () => {
       if(userAnswer === 'medium' || userAnswer === 'small') {
-        container.removeChild(clone);
-      }
-   }) 
-    container.appendChild(clone);
+         container.removeChild(clone);
+     }
+    }) 
   }
 }
 
@@ -206,12 +206,13 @@ function smallGridCellGenerator() {
     clearBtn.addEventListener('click', () => {
       clone.style.backgroundColor = null;
     })
+   
+    container.appendChild(clone);
     gridSizeBtn.addEventListener('click', () => {
       if(userAnswer === 'large' || userAnswer === 'medium') {
         container.removeChild(clone);  
-      }
+     }
     }) 
-    container.appendChild(clone);
   }
 }
 
@@ -228,7 +229,7 @@ gridSizeBtn.addEventListener('click', () => {
   gridChange(userAnswer);
 }) 
 
-
+mediumGridTotalCells();
 
 
 
