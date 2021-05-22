@@ -98,6 +98,17 @@ function rdmColor(element) {
   return true;
 }
 
+//adds functionality for when each btn is clicked
+function btnClicked(element) {
+  if(isClicked(rainbowBtn) === true) {
+    element.style.backgroundColor = rdmColor(element);
+  } else if(isClicked(colorInput) === true) {
+    element.style.backgroundColor = color;
+  } else if(isClicked(eraseBtn) === true) {
+    element.style.backgroundColor = 'white';
+  } 
+}
+
 //promps user to enter what size grid they would like then saves it
 function gridSizeChoice() {
   let choice = prompt('Please choose small, medium, or large');
