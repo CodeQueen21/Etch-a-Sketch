@@ -93,12 +93,14 @@ function isClicked(element) {
   }
 }
 
+//creates random colors
 function rdmColor(element) {
   const randomColor = Math.floor(Math.random()*16777215).toString(16);
   element.style.backgroundColor = "#" + randomColor; 
   return true;
 }
 
+// medium sized grid
 function mediumGridCellGenerator() {
   for(let i = 0; i < 16; i++) {
     div.style.width = '29px';
@@ -129,6 +131,64 @@ function mediumGridTotalCells() {
   }
 }
 mediumGridTotalCells();
+
+//largeGrid cellSize
+function largeGridCellGenerator() {
+  for(let i = 0; i < 8; i++) {
+    div.style.width = '60px';
+    div.style.height = '60px';
+    let clone = div.cloneNode(true);
+      clone.classList.add('cell');
+      clone.addEventListener('mouseenter', () => {
+       btnClicked(clone);
+    })
+    clearBtn.addEventListener('click', () => {
+      clone.style.backgroundColor = null;
+    })
+    gridSizeBtn.addEventListener('click', () => {
+      if(userAnswer === 'medium' || userAnswer === 'small') {
+        container.removeChild(clone);
+      }
+   }) 
+    container.appendChild(clone);
+  }
+}
+
+function largeGridTotalCells() {
+  for (let i = 0; i < 15; i++) {
+      largeGridCellGenerator();
+      i++;
+  }
+}
+
+//smallGrid 
+function smallGridCellGenerator() {
+  for(let i = 0; i < 32; i++) {
+      div.style.width = '13.5px';
+      div.style.height = '13.5px';
+      let clone = div.cloneNode(true);
+      clone.classList.add('cell');
+      clone.addEventListener('mouseenter', () => {
+       btnClicked(clone);
+    })
+    clearBtn.addEventListener('click', () => {
+      clone.style.backgroundColor = null;
+    })
+    gridSizeBtn.addEventListener('click', () => {
+      if(userAnswer === 'large' || userAnswer === 'medium') {
+        container.removeChild(clone);  
+      }
+    }) 
+    container.appendChild(clone);
+  }
+}
+
+function smallGridTotalCells() {
+  for (let i = 0; i < 62; i++) {
+    smallGridCellGenerator()
+      i++;
+  }
+}
 
 
 
