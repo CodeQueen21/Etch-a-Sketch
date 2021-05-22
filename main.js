@@ -11,6 +11,76 @@ let eraseBtn = document.getElementById('erase');
 let clearBtn = document.getElementById('clear')
 let userAnswer;
 
+gridSizeBtn.addEventListener('click', () => {
+  gridSizeBtn.style.border = 'thin solid white';
+  gridSizeBtn.style.borderRadius = '5px';
+  colorInputLabel.style.border = 'none';
+  colorInputLabel.style.borderRadius = 'none';
+  rainbowBtn.style.border = 'none';
+  rainbowBtn.style.borderRadius = 'none';
+  eraseBtn.style.border = 'none';
+  eraseBtn.style.borderRadius = 'none';
+  clearBtn.style.border = 'none';
+  clearBtn.style.borderRadius = 'none';
+}) 
+
+//styling for when the change color btn is clicked
+colorInput.addEventListener('input', () => {
+  color = colorInput.value;
+  colorInputLabel.style.border = 'thin solid white';
+  colorInputLabel.style.borderRadius = '5px';
+  rainbowBtn.style.border = 'none';
+  rainbowBtn.style.borderRadius = 'none';
+  gridSizeBtn.style.border = 'none';
+  gridSizeBtn.style.borderRadius = 'none';
+  eraseBtn.style.border = 'none';
+  eraseBtn.style.borderRadius = 'none';
+  clearBtn.style.border = 'none';
+  clearBtn.style.borderRadius = 'none';
+});
+
+//styling for when the rainbow btn is clicked
+rainbowBtn.addEventListener('click', () => {
+  rainbowBtn.style.border = 'thin solid white';
+  rainbowBtn.style.borderRadius = '5px';
+  colorInputLabel.style.border = 'none';
+  colorInputLabel.style.borderRadius = 'none';
+  gridSizeBtn.style.border = 'none';
+  gridSizeBtn.style.borderRadius = 'none';
+  eraseBtn.style.border = 'none';
+  eraseBtn.style.borderRadius = 'none';
+  clearBtn.style.border = 'none';
+  clearBtn.style.borderRadius = 'none';
+});
+
+//styling for when the erase btn is clicked
+eraseBtn.addEventListener('click', () => {
+  eraseBtn.style.border = 'thin solid white';
+  eraseBtn.style.borderRadius = '5px';
+  rainbowBtn.style.border = 'none';
+  rainbowBtn.style.borderRadius = 'none';
+  colorInputLabel.style.border = 'none';
+  colorInputLabel.style.borderRadius = 'none';
+  gridSizeBtn.style.border = 'none';
+  gridSizeBtn.style.borderRadius = 'none';
+  clearBtn.style.border = 'none';
+  clearBtn.style.borderRadius = 'none';
+})
+
+//styling for when the clear btn is clicked
+clearBtn.addEventListener('click', () => {
+  clearBtn.style.border = 'thin solid white';
+  clearBtn.style.borderRadius = '5px';
+  eraseBtn.style.border = 'none';
+  eraseBtn.style.borderRadius = 'none';
+  rainbowBtn.style.border = 'none';
+  rainbowBtn.style.borderRadius = 'none';
+  colorInputLabel.style.border = 'none';
+  colorInputLabel.style.borderRadius = 'none';
+  gridSizeBtn.style.border = 'none';
+  gridSizeBtn.style.borderRadius = 'none';
+})
+
 function rdmColor(element) {
   const randomColor = Math.floor(Math.random()*16777215).toString(16);
   element.style.backgroundColor = "#" + randomColor; 
