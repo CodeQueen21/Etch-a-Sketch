@@ -11,8 +11,6 @@ let eraseBtn = document.getElementById('erase');
 let clearBtn = document.getElementById('clear')
 let userAnswer;
 
-
-
 //styling for when change grid size btn is clicked
 gridSizeBtn.addEventListener('click', () => {
   gridSizeBtn.style.border = 'thin solid white';
@@ -98,6 +96,28 @@ function rdmColor(element) {
   const randomColor = Math.floor(Math.random()*16777215).toString(16);
   element.style.backgroundColor = "#" + randomColor; 
   return true;
+}
+
+//promps user to enter what size grid they would like then saves it
+function gridSizeChoice() {
+  let choice = prompt('Please choose small, medium, or large');
+  let answer = choice.toLowerCase();
+  if(answer === 'large' || answer === 'medium' || answer === 'small') {
+    return userAnswer = answer;
+  } else {
+    alert('You must enter small, medium or large');
+  }
+}
+
+//depending on the users answer, it chooses which grid size to activate
+function gridChange(answer) {
+  if(answer === 'large') {
+      largeGridTotalCells();
+  } else if(answer === 'small') {
+      smallGridTotalCells()
+  } else if(answer === 'medium') {
+      mediumGridTotalCells();
+  }
 }
 
 // medium sized grid
